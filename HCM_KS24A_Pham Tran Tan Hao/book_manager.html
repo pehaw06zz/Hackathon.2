@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <header>Quản lý sách</header>
+
+  <div class="container">
+    <form onsubmit="addBook(event)">
+      <input type="text" id="title" placeholder="Tên sách" required />
+      <input type="text" id="author" placeholder="Tác giả" required />
+      <input type="number" id="year" placeholder="Năm" required />
+      <input type="text" id="genre" placeholder="Thể loại" required />
+      <button>Thêm</button>
+    </form>
+
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Tìm kiếm theo tên sách..."
+        oninput="filterBooks()"
+      />
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Tên sách</th>
+          <th>Tác giả</th>
+          <th>Năm</th>
+          <th>Thể loại</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody id="bookTableBody"></tbody>
+    </table>
+  </div>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
